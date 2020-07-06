@@ -22,18 +22,10 @@
       const App = () => {
         const [value, setValue] = React.useState("");
         const [todo, setTodos] = React.useState([]);
-        //console.log(todo)
         const adding = (index) => {
           return setTodos(todo.concat([value])), setValue("");
         };
         const [todoindex, settodoindex] = React.useState(null);
-        // const Changecolor=(index)=>{
-        //     return(
-        //    setbackground(background)
-
-        //     );
-        // };
-
         return (
           <div>
             <input
@@ -49,9 +41,7 @@
                   onMouseEnter={() => {
                     settodoindex(index);
                   }}
-                  // onClick={(event)=>console.log(index,todo,background)
-
-                  // }
+                  
                   onMouseOut={() => settodoindex(null)}
                   style={{ background: index == todoindex ? "red" : "blue" }}
                   key={index}
